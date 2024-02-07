@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/story/start.rpy", line 67: end of line expected.
+    hide asuka:
+              ^
+
+File "game/story/start.rpy", line 130: end of line expected.
+    hide asuka2:
+               ^
+
+Ren'Py Version: Ren'Py 7.7.0.24012702
+Sun Feb  4 15:21:46 2024

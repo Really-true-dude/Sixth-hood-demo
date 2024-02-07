@@ -1,0 +1,50 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/story/start.rpy", line 378, in script
+    "Прошло около трех с чем то часов.."
+IOError: Couldn't find file 'videos/VID01_R4_Heads.mp4'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/story/start.rpy", line 378, in script
+    "Прошло около трех с чем то часов.."
+  File "renpy/ast.py", line 2557, in execute
+    Say.execute(self)
+  File "renpy/ast.py", line 615, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "renpy/exports.py", line 1493, in say
+    who(what, *args, **kwargs)
+  File "renpy/character.py", line 1391, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "renpy/character.py", line 1045, in do_display
+    **display_args)
+  File "renpy/character.py", line 738, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "renpy/ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "renpy/display/core.py", line 2730, in interact_core
+    renpy.audio.audio.interact()
+  File "renpy/audio/audio.py", line 1251, in interact
+    periodic()
+  File "renpy/audio/audio.py", line 1205, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "renpy/audio/audio.py", line 1183, in periodic_thread_main
+    periodic_pass()
+  File "renpy/audio/audio.py", line 1125, in periodic_pass
+    c.periodic()
+  File "renpy/audio/audio.py", line 534, in periodic
+    topf = load(filename)
+  File "renpy/audio/audio.py", line 72, in load
+    rv = renpy.loader.load(fn, directory="audio")
+  File "renpy/loader.py", line 672, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'videos/VID01_R4_Heads.mp4'.
+
+Windows-10-10.0.19041 AMD64
+Ren'Py 7.7.0.24012702
+Sixth hood 1.0
+Sun Feb  4 16:45:41 2024
