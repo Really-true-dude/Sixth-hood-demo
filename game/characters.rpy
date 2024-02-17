@@ -1,3 +1,4 @@
+define config.rollback_enabled = False
 # Определение персонажей игры.
 define mc = Character("[mc_name]", color="#006400")
 define asuka = Character("Асука", color="#DC143C", image = "asuka")
@@ -27,6 +28,7 @@ define asuka_love_points = 0
 define is_loved_by_asuka = False
 define conf_started = False
 define prepared_for_conf = False
+
 
 # Images resized
 image alexandr serious2:

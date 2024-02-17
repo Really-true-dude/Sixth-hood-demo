@@ -253,13 +253,13 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Назад") action Rollback()
+            #textbutton _("Назад") action Rollback()
             textbutton _("История") action ShowMenu('history')
             textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Авто") action Preference("auto-forward", "toggle")
             textbutton _("Сохранить") action ShowMenu('save')
-            textbutton _("Б.Сохр") action QuickSave()
-            textbutton _("Б.Загр") action QuickLoad()
+            #textbutton _("Б.Сохр") action QuickSave()
+            #textbutton _("Б.Загр") action QuickLoad()
             textbutton _("Опции") action ShowMenu('preferences')
 
 
@@ -552,9 +552,12 @@ screen about():
             ## gui.about обычно установлено в options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
-
+            
+            text _("'Шестой район' - это захватывающая игра, в которой игрок берет на себя роль главы одного из шести районов, ставшего жертвой интриг и предательства. Главный герой оказывается в круговороте загадок, сражений и сложных выборов, пытаясь раскрыть тайны и выявить лгуна среди своих соратников.\n")
+            text _("Герою предстоит понять, кому можно доверять, чтобы объединить свой район и взять власть в свои руки. Однако, по мере того как он раскрывает тайны и прокладывает путь к вершине власти, возникает вопрос о том, сохранится ли его человечность.\n")
+            text _("Игра 'Шестой район' ставит перед игроком моральные дилеммы и требует принятия сложных решений, которые могут повлиять на характер и судьбу главного героя. Сможет ли он сохранить свою человечность в условиях политических интриг и предательства, или же придется пожертвовать некоторыми принципами ради власти и выживания своего района? Это остается открытым вопросом в ходе захватывающего путешествия по 'Шестому району'.\n")
             text _("Сделано с помощью {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
-
+            text _("Авторы музыки: \nFASSsounds - Happy December\nSlicebeats - Alone\nanrocomposer - Incesante\n29811401 - Playing in Color\nTop-Flow - Speed Thrill Beat\nИ другие..")
 
 style about_label is gui_label
 style about_label_text is gui_label_text

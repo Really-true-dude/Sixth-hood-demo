@@ -75,7 +75,7 @@ define config.has_voice = True
 
 define config.enter_transition = dissolve
 define config.exit_transition = dissolve
-
+define config.main_menu_music = "music/bg_sound.ogg"
 
 ## Переход между экранами игрового меню.
 

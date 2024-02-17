@@ -1,30 +1,56 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/story/secondDayMorning.rpy", line 524, in script
-    with Fade(1.5)
-TypeError: Fade() takes at least 3 arguments (3 given)
+After initialization, but before game start.
+  File "game/screens.rpy", line 537, in prepare_screen
+    screen about():
+  File "game/screens.rpy", line 537, in prepare
+    screen about():
+  File "game/screens.rpy", line 543, in prepare
+    use game_menu(_("Об игре"), scroll="viewport"):
+  File "game/screens.rpy", line 543, in prepare
+    use game_menu(_("Об игре"), scroll="viewport"):
+  File "game/screens.rpy", line 547, in prepare
+    vbox:
+  File "game/screens.rpy", line 547, in prepare
+    vbox:
+  File "game/screens.rpy", line 556, in prepare
+    text _(f"'Шестой район' - это захватывающая игра, в которой игрок берет на себя роль главы одного из шести районов, ставшего жертвой интриг и предательства. Главный герой оказывается в круговороте загадок, сражений и сложных выборов, пытаясь раскрыть тайны и выявить лгуна среди своих соратников.
+SyntaxError: EOL while scanning string literal (screens.rpy, line 556)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/story/secondDayMorning.rpy", line 524, in script
-    with Fade(1.5)
-  File "renpy/ast.py", line 1363, in execute
-    renpy.exports.with_statement(trans, paired=paired)
-  File "renpy/exports.py", line 1781, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "renpy/display/core.py", line 1551, in do_with
-    clear=clear)
-  File "renpy/display/core.py", line 2165, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "renpy/display/core.py", line 2604, in interact_core
-    trans = instantiate_transition(None, old_root, layers_root)
-  File "renpy/display/core.py", line 2520, in instantiate_transition
-    new_widget=new_d)
-TypeError: Fade() takes at least 3 arguments (3 given)
+  File "renpy/bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 635, in main
+    run(restart)
+  File "renpy/main.py", line 94, in run
+    renpy.display.screen.prepare_screens()
+  File "renpy/display/screen.py", line 1026, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 537, in prepare_screen
+    screen about():
+  File "game/screens.rpy", line 537, in prepare
+    screen about():
+  File "game/screens.rpy", line 543, in prepare
+    use game_menu(_("Об игре"), scroll="viewport"):
+  File "game/screens.rpy", line 543, in prepare
+    use game_menu(_("Об игре"), scroll="viewport"):
+  File "game/screens.rpy", line 547, in prepare
+    vbox:
+  File "game/screens.rpy", line 547, in prepare
+    vbox:
+  File "game/screens.rpy", line 556, in prepare
+    text _(f"'Шестой район' - это захватывающая игра, в которой игрок берет на себя роль главы одного из шести районов, ставшего жертвой интриг и предательства. Главный герой оказывается в круговороте загадок, сражений и сложных выборов, пытаясь раскрыть тайны и выявить лгуна среди своих соратников.
+  File "renpy/py2analysis.py", line 707, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "renpy/py2analysis.py", line 689, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "renpy/python.py", line 1144, in py_compile
+    raise e
+SyntaxError: EOL while scanning string literal (screens.rpy, line 556)
 
 Windows-10-10.0.19041 AMD64
 Ren'Py 7.7.0.24012702
 Sixth hood 1.0
-Sun Feb 11 20:38:06 2024
+Sat Feb 17 21:53:26 2024

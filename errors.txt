@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/story/secondDayMorning.rpy", line 565: expected 'simple_expression' not found.
-    show alexei serious at zorder 1 left2
-                           ^
+File "game/characters.rpy", line 1: expected statement.
+    config.rollback_enabled = 0
+                            ^
 
 Ren'Py Version: Ren'Py 7.7.0.24012702
-Sun Feb 11 20:47:37 2024
+Sat Feb 17 23:14:07 2024
